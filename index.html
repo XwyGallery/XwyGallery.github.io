@@ -5,13 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>AI Gallery</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+	
+	<style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 1.5%;
+        }
+    </style>
 
 </head>
 
@@ -25,59 +36,20 @@
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
         <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+
         </ul>
     </header>
     <!-- End header -->
 
     <div id="lead">
         <div id="lead-content">
-            <h1>AI画廊</h1>
-            <h2>AI Gallery</h2>
-            <!-- <a href="assets/resume.pdf" target="_blank" class="btn-rounded-white">简历下载</a> -->
+            <h1>AI Gallery</h1>
+            <h2>https://github.com/XwyGallery/XwyGallery.github.io</h2>
 			<h2>----------------------</h2>
 			<div id="contact-form">
 
 				<!-- One Social Icon Block -->
-				<article>
-					<i class="fa fa-envelope fa-fw"></i>
-					<span>xu.wenyuan@foxmail.com</span>
-				</article>
-				<!-- End of One Social Icon Block -->
 
-				<article>
-					<i class="fa fa-phone fa-fw"></i>
-					<span>17772200615</span>
-				</article>
-				<article>
-					<i class="fa fa-home fa-fw"></i>
-					<span>YUNNAN，KUNMING</span>
-				</article>
-				<article>
-					<i class="fa fa-weixin fa-fw"></i>
-					<span>17772200615</span>
-				</article>
-				<article>
-					<i class="fa fa-qq fa-fw"></i>
-					<span>964046872</span>
-				</article>
 			</div>
 
 			<!-- End #contact-form -->
@@ -146,20 +118,45 @@ Browse our gallery and discover the endless possibilities of AI art.
 
             <!-- One Project 2D Block -->
             <div class="project shadow-large">
-                <div class="project-image">
-                    <img class="image" src="assets/img/sd1.png" alt="assets/fulls/image01-full.jpg" />
+				<!-- div class="project-image" -->
+                <div class="gallery">
+                    <img class="image" src="assets/img/sd1.png" alt="assets/img/sd1.png" />
                 </div>
             </div>
-            <!-- End of One Project 2D Block -->
+            <!-- End of One img -->
 
 
             <div class="project shadow-large">
-                <div class="project-image">
-                    <img class="image" src="assets/img/sd2.jpeg" alt="assets/fulls/image02-full.jpg" />
+                <div class="gallery">
+                    <img class="image" src="assets/img/sd2.jpeg" alt="assets/img/sd2.jpeg" />
                 </div>
                 <!-- End .project-image -->
             </div>
-            <!-- End .project -->
+            <!-- End of One img -->
+			
+			<div class="project shadow-large">
+                <div class="gallery">
+                    <img class="image" src="assets/img/sd3.png" alt="assets/img/sd3.png" />
+                </div>
+                <!-- End .project-image -->
+            </div>
+			<!-- End of One img -->
+			
+			<div class="project shadow-large">
+                <div class="gallery">
+                    <img class="image" src="assets/img/sd4.png" alt="assets/img/sd4.png" />
+                </div>
+                <!-- End .project-image -->
+            </div>
+            <!-- End of One img -->
+			
+			<div class="project shadow-large">
+                <div class="gallery">
+                    <img class="image" src="assets/img/sd5.png" alt="assets/img/sd5.png" />
+                </div>
+                <!-- End .project-image -->
+            </div>
+            <!-- End of One img -->
 
         </div>
     </div>
@@ -308,48 +305,10 @@ Browse our gallery and discover the endless possibilities of AI art.
 
     <!-- End #projects -->
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Python</li>
-			<li>MATLAB</li>
-			<li>CSS/HTML</li>
-			<li>LaTeX</li>
-            <li>ENGLISH</li>
-        </ul>
-    </div>
+
     <!-- End #skills -->
 
-    <div id="contact">
-        <h2>CONTACT ME！</h2>
-        <div id="contact-form">
 
-            <!-- One Social Icon Block -->
-            <article>
-                <i class="fa fa-envelope fa-fw"></i>
-                <span>xu.wenyuan@foxmail.com</span>
-            </article>
-            <!-- End of One Social Icon Block -->
-
-            <article>
-                <i class="fa fa-phone fa-fw"></i>
-                <span>17772200615</span>
-            </article>
-            <article>
-                <i class="fa fa-home fa-fw"></i>
-                <span>YUNNAN，KUNMING</span>
-            </article>
-            <article>
-                <i class="fa fa-weixin fa-fw"></i>
-                <span>17772200615</span>
-            </article>
-            <article>
-                <i class="fa fa-qq fa-fw"></i>
-                <span>964046872</span>
-            </article>
-        </div>
-        <!-- End #contact-form -->
-    </div>
     <!-- End #contact -->
 
     <footer>
