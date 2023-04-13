@@ -40,6 +40,7 @@
         </ul>
 
         <!-- 顶部插入输入框，用于提问GPT -->
+        <script src="js/myScript.js"></script> <!-- 引入外部的 JavaScript 文件 -->
         <h1>ASK ME SOMETHING</h1>
         <form>
             <label for="inputBox">INPUT HERE：</label>
@@ -50,78 +51,6 @@
 
         <button type="button" onclick="clearOutput()">CLEAR</button>
 
-        <script>
-            // JavaScript 代码可以在这里编写
-
-
-            async function getResponseFromAPI(input) {
-                const endpoint = 'https://api.openai.com/v1/completions';
-                const apiKey = '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'; //换成自己的API Key
-                const prompt = input;
-
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
-                    },
-
-                    body: JSON.stringify({
-                        model: "text-davinci-003",
-                        prompt,
-                        max_tokens: 100,
-                        n: 1,
-                        stop: null,
-                        temperature: 0.5,
-                    }),
-                });
-                const result = await response.json();
-                return result.choices[0].text;
-            }
-
-
-            function sendMessage() {
-                var inputBox = document.getElementById('inputBox');
-                var outputBox = document.getElementById('outputBox');
-                const prompt = inputBox.value;
-                const apiKey = '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'; //Your own API Key
-
-
-
-                // 向 GPT 的 API 发送请求
-                fetch('https://api.openai.com/v1/completions', {
-                    method: 'POST',
-                    body: JSON.stringify({model: 'text-davinci-003',
-                        prompt,
-                        max_tokens: 100,
-                        n: 1,
-                        stop: null,
-                        temperature: 0.5,}), // 在请求体中传递 engine 参数}),
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}` // 将您的 API 密钥放在这里
-                    }
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        // 获取 GPT 返回的输出信息
-                        var output = data.choices[0].text;
-                        var outputElement = document.createElement('p');
-                        outputElement.textContent = 'GPT：' + output;
-                        outputBox.appendChild(outputElement);
-                    })
-                    .catch(error => console.error('请求失败：', error));
-
-                inputBox.value = '';
-            }
-
-            function clearOutput() {
-                var outputBox = document.getElementById('outputBox');
-                outputBox.innerHTML = '';
-            }
-
-
-        </script>
 
     </header>
     <!-- End header -->
