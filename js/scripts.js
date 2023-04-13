@@ -144,3 +144,14 @@
   })
   
 })(jQuery);
+
+// JavaScript 代码可以在这里编写
+function sendMessage() {
+  var inputBox = document.getElementById('inputBox');
+  var outputBox = document.getElementById('outputBox');
+  var message = inputBox.value;
+  var output = document.createElement('p');
+  output.textContent = '用户输入：' + message;
+  outputBox.appendChild(output);
+  inputBox.value = '';
+}
